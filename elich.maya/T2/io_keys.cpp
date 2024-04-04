@@ -1,8 +1,8 @@
-#include "io_keys.h"
+#include "io_keys.hpp"
 #include <iostream>
 #include <iomanip>
 #include <regex>
-#include "fmtguard.h"
+#include "fmtguard.hpp"
 
 std::istream & elich::operator>>(std::istream & in, DelimiterIO && dest)
 {
@@ -11,6 +11,7 @@ std::istream & elich::operator>>(std::istream & in, DelimiterIO && dest)
   {
     return in;
   }
+  //вот это место сбрасывает содержиое поока in
   char c = '0';
   in >> c;
   if (in && (c != dest.exp))

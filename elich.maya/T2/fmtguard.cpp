@@ -1,4 +1,4 @@
-#include "fmtguard.h"
+#include "fmtguard.hpp"
 
 elich::iofmtguard::iofmtguard(std::basic_ios< char > & s):
   s_(s),
